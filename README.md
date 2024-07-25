@@ -1,15 +1,46 @@
-# solana-fellowship
+# CLI Wallet
 
-To install dependencies:
+This is a simple CLI wallet for the Solana blockchain, built with Node.js. It allows you to generate a keypair, request an airdrop of SOL, and send SOL to another wallet.
+
+## Prerequisites
+
+- Node.js
+- bun
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/solana-cli-wallet.git
+    cd cli-wallet
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    bun install
+    ```
+
+## Usage
+
+### Generate a New Keypair
+
+To generate a new keypair and save it to `keypair.json`:
 
 ```bash
-bun install
+bun index.ts generate
 ```
 
-To run:
+### Request an Airdrop of 1 SOL
 
 ```bash
-bun run index.ts
+bun index.ts airdrop
 ```
 
-This project was created using `bun init` in bun v1.1.20. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### Send SOL to Another Wallet
+
+```bash
+bun index.ts send -r <recipient-public-key> -a <amount-in-SOL>
+
+```
